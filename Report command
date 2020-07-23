@@ -1,0 +1,56 @@
+{
+  "name": "report",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "PvSoO",
+  "actions": [
+    {
+      "message": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "msgauthor",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "msg",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "msgtimestamp",
+      "name": "Store Message Info"
+    },
+    {
+      "id": "webhook id",
+      "token": "webhook token",
+      "storage": "1",
+      "varName": "webhook",
+      "name": "Find Webhook"
+    },
+    {
+      "webhook": "1",
+      "varName": "webhook",
+      "message": "${tempVars(\"msgauthor\")}: ${tempVars(\"msg\")} \n\ntimestamp ${tempVars(\"msgtimestamp\")}  ",
+      "name": "Send Message To Webhook"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Sent!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "_aliases": []
+}
